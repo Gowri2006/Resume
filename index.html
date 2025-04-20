@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="hover-button" onclick="toggleResume(true)">View Resume</button>
+
+  <div class="resume-overlay" id="resumeOverlay">
+    <div class="box">
+      <button class="close-button" onclick="toggleResume(false)">×</button>
+      <div class="resume-form">
+        <!-- Resume content -->
+        <h2 class="fade-slide delay-0">K N S G Keerthana Sri</h2>
+        <p class="fade-slide delay-1">B.Tech in Computer Science (Artificial Inteligence and Machine Learning), 2027</p>
+        <p class="fade-slide delay-1">G. Narayanamma Institute of Technology and Science</p>
+        <p class="fade-slide delay-1">knsgkeerthanasri@gmail.com | +91 9100601855</p>
+        <p class="fade-slide delay-1">🔗 https://www.linkedin.com/in/keerthanasri-knsg-4a9281294/</p>
+
+        <h3 class="fade-slide delay-2">Education</h3>
+        <ul class="fade-slide delay-2">
+          <li>GNITS – B.Tech in CSE (AI & ML), CGPA: 9.41/10</li>
+          <li>Trividyaa Junior College – Intermediate, 82.8%</li>
+          <li>Pace School – 9.5 GPA</li>
+        </ul>
+
+        <h3 class="fade-slide delay-2">Skills</h3>
+        <p class="fade-slide delay-2">Languages: C, Python, Java, HTML</p>
+        <p class="fade-slide delay-2">Tools: DBMS, Git (Basics), Matplotlib</p>
+
+        <h3 class="fade-slide delay-3">Certifications</h3>
+        <ul class="fade-slide delay-3">
+          <li>Cloud Technology (2024)</li>
+          <li>SQL Development (2024)</li>
+        </ul>
+
+        <h3 class="fade-slide delay-3">Activities & Interests</h3>
+        <ul class="fade-slide delay-3">
+          <li>Talantia Club Member – Event: Talent hunt</li>
+          <li>Music, Dancing, Drawing, Writing Stories and poems</li>
+        </ul>
+
+        <h3 class="fade-slide delay-3">Projects</h3>
+        <p class="fade-slide delay-3">Study Tracker (In Progress)</p>
+        <ul class="fade-slide delay-3">
+          <li>Tracks your study time.</li>
+          <li>Sends alerts and give deadlines.</li>
+          <li>Based on the data give it generated an apropriate time table.</li>
+        </ul>
+
+        <h3 class="fade-slide delay-3">Hackathons</h3>
+        <p class="fade-slide delay-3">2024 – Ideathon </p>
+
+        <h3 class="fade-slide delay-3">Relevant Coursework</h3>
+        <ul class="fade-slide delay-3">
+          <li>Database Management Systems</li>
+          <li>Data Structures & Algorithms</li>
+          <li>Python Programming</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleResume(show) {
+      const overlay = document.getElementById("resumeOverlay");
+      overlay.classList.toggle("active", show);
+    }
+  </script>
+</body>
+</html>
