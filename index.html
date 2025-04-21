@@ -3,72 +3,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="hover-button" onclick="toggleResume(true)">View Resume</button>
+  <div class="tabs-container">
+    <button class="tab" onclick="scrollToSection('profile')">Profile</button>
+    <button class="tab" onclick="scrollToSection('about')">About</button>
+    <button class="tab" onclick="scrollToSection('education')">Education</button>
+    <button class="tab" onclick="scrollToSection('skills')">Skills</button>
+    <button class="tab" onclick="scrollToSection('projects')">Projects</button>
+    <button class="tab" onclick="scrollToSection('contact')">Contact</button>
+  </div>
 
-  <div class="resume-overlay" id="resumeOverlay">
-    <div class="box">
-      <button class="close-button" onclick="toggleResume(false)">×</button>
-      <div class="resume-form">
-        <!-- Resume content -->
-        <h2 class="fade-slide delay-0">K N S G Keerthana Sri</h2>
-        <p class="fade-slide delay-1">B.Tech in Computer Science (Artificial Inteligence and Machine Learning), 2027</p>
-        <p class="fade-slide delay-1">G. Narayanamma Institute of Technology and Science</p>
-        <p class="fade-slide delay-1">knsgkeerthanasri@gmail.com | +91 9100601855</p>
-        <p class="fade-slide delay-1">🔗 https://www.linkedin.com/in/keerthanasri-knsg-4a9281294/</p>
+  <div class="content-area">
+    <section id="profile" class="card">
+      <h1>K N S G Keerthana Sri</h1>
+      <p><strong>B.Tech in Computer Science (Artificial Intelligence), 2027</strong></p>
+      <p>G. Narayanamma Institute of Technology and Science</p>
+      <hr />
+      <p><strong>Email:</strong> knsgkeerthanasri@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9100601855</p>
+      <p><strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/keerthanasri-knsg-4a9281294/" target="_blank">linkedin.com/in/keerthanasri-knsg</a>
+      </p>
+    </section>
 
-        <h3 class="fade-slide delay-2">Education</h3>
-        <ul class="fade-slide delay-2">
-          <li>GNITS – B.Tech in CSE (AI & ML), CGPA: 9.41/10</li>
-          <li>Trividyaa Junior College – Intermediate, 82.8%</li>
-          <li>Pace School – 9.5 GPA</li>
-        </ul>
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>
+        I am passionate about Web Development and want to built appications which can be helpful to all by solving real-world problems. Now I am actively building projects, participating in hackathons.
+      </p>
+    </section>
 
-        <h3 class="fade-slide delay-2">Skills</h3>
-        <p class="fade-slide delay-2">Languages: C, Python, Java, HTML</p>
-        <p class="fade-slide delay-2">Tools: DBMS, Git (Basics), Matplotlib</p>
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul>
+        <li>GNITS – B.Tech in CSE (AI & ML), CGPA: 9.41/10</li>
+        <li>Trividyaa Junior College – Intermediate, 82.8%</li>
+        <li>Pace School – 9.5 GPA</li>
+      </ul>
+    </section>
 
-        <h3 class="fade-slide delay-3">Certifications</h3>
-        <ul class="fade-slide delay-3">
-          <li>Cloud Technology (2024)</li>
-          <li>SQL Development (2024)</li>
-        </ul>
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <p><strong>Languages:</strong> C, Python, Java</p>
 
-        <h3 class="fade-slide delay-3">Activities & Interests</h3>
-        <ul class="fade-slide delay-3">
-          <li>Talantia Club Member – Event: Talent hunt</li>
-          <li>Music, Dancing, Drawing, Writing Stories and poems</li>
-        </ul>
+      <h3>Certifications</h3>
+      <ul>
+        <li>Cloud Technology (2024)</li>
+        <li>SQL Development (2024)</li>
+      </ul>
+    </section>
 
-        <h3 class="fade-slide delay-3">Projects</h3>
-        <p class="fade-slide delay-3">Study Tracker (In Progress)</p>
-        <ul class="fade-slide delay-3">
-          <li>Tracks your study time.</li>
-          <li>Sends alerts and give deadlines.</li>
-          <li>Based on the data give it generated an apropriate time table.</li>
-        </ul>
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <p><strong>Study Tracker (In Progress)</strong></p>
+      <ul>
+        <li>Tracks your study time.</li>
+        <li>Sends alerts and gives deadlines.</li>
+        <li>Based on the data give it generated an appropriate time table</li>
+      </ul>
 
-        <h3 class="fade-slide delay-3">Hackathons</h3>
-        <p class="fade-slide delay-3">2024 – Ideathon </p>
+      <h3>Hackathons</h3>
+      <ul>
+        <li>2024 – Ideathon</li>
+      </ul>
 
-        <h3 class="fade-slide delay-3">Relevant Coursework</h3>
-        <ul class="fade-slide delay-3">
-          <li>Database Management Systems</li>
-          <li>Data Structures & Algorithms</li>
-          <li>Python Programming</li>
-        </ul>
-      </div>
-    </div>
+    <section id="contact" class="card">
+      <h2>Activities & Interests</h2>
+      <ul>
+        <li>Talantia club Member – Event: Talent Hunt</li>
+        <li>Music, Dancing, Drawing</li>
+      </ul>
+
+      <h2>Relevant Coursework</h2>
+      <ul>
+        <li>Database Management Systems</li>
+        <li>Data Structures & Algorithms</li>
+        <li>Python Programming</li>
+      </ul>
+    </section>
   </div>
 
   <script>
-    function toggleResume(show) {
-      const overlay = document.getElementById("resumeOverlay");
-      overlay.classList.toggle("active", show);
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 </body>
